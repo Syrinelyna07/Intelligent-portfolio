@@ -52,3 +52,7 @@ closeIcon.addEventListener("click", function(){
     sideBar.classList.add("close-sidebar");
     
 })
+const videos = document.querySelectorAll(".project-vidbox video");
+videos.forEach(video => {
+  video.playbackRate = 3; // vitesse x2
+});
