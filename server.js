@@ -3,11 +3,17 @@ import bodyParser from "body-parser";
 import axios from "axios";
 import cors from "cors";
 import dotenv from "dotenv";
+import path from "path";
+import { fileURLToPath } from "url";
 
 dotenv.config();
 
+// === Remplacer __filename et __dirname pour ES Modules ===
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -45,14 +51,12 @@ function detectLanguage(message) {
 // === ENDPOINT DE TEST DE L'API === //
 app.get("/test", async (req, res) => {
   try {
-    // Test simple : on récupère juste les modèles disponibles
     const response = await axios.get("https://api.groq.com/openai/v1/models", {
       headers: {
         "Authorization": `Bearer ${process.env.GROQ_API_KEY}`,
         "Content-Type": "application/json"
       }
     });
-
     res.json({ message: "✅ Clé API valide !", models: response.data.data });
   } catch (error) {
     console.error("Erreur API Test :", error.response?.data || error.message);
@@ -104,5 +108,14 @@ app.post("/chat", async (req, res) => {
     }
   }
 });
+
+// === SERVIR LES FICHIERS STATIQUES ET INDEX.HTML === //
+app.use(express.static(__dirname));
+
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "index.html"));
+});
+
+// === LANCEMENT DU SERVEUR === //
 console.log("Clé utilisée :", process.env.GROQ_API_KEY);
 app.listen(PORT, () => console.log(`✅ Serveur en ligne sur http://localhost:${PORT}`));
