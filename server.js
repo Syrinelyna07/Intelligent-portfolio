@@ -22,21 +22,23 @@ app.use(bodyParser.json());
 const personalData = {
   fr: `
 Nom : Syrine Lyna
-Cursus : 3ème année informatique à ESI Alger ayant accompli 2 ans de cycle prépa
+Cursus :BAC generale serie science 18.63 puis a validé 2ans de prepa et maintenant etudiante en 3ème année informatique à ESI Alger ayant accompli 2 ans de cycle prépa
 Projets :
 - Portfolio web interactif avec chatbot personnalisé
 - Site web de prédiction de cancer du sein pour Octobre Rose
 - Projet 2CP système embarqué de quiz
+certificat CS50 introduction to ai with python  , cisco data science certificate and others from linked in and microsoft 
 Compétences : Java, JavaFX, Node.js, Express, React, Python, IA, Data Science, Machine Learning, LLMs, Streamlit, Next.js, Git, GitHub
 Langues : Français, Anglais, Arabe, Kabyle
 `,
   en: `
 Name: Syrine Lyna
-Education: 3rd-year Computer Science student at ESI Algiers, having completed 2 years of preparatory cycle
+Education: General bacaluria 18.63 and validated 2years of prepa school no 3rd-year Computer Science student at ESI Algiers, having completed 2 years of preparatory cycle
 Projects:
 - Interactive web portfolio with personalized chatbot
 - Breast cancer prediction website for Octobre Rose campaign
 - Embedded system project: quiz application (2CP)
+certificat CS50 introduction to ai with python  , cisco data science certificate and others from linked in and microsoft 
 Skills: Java, JavaFX, Node.js, Express, React, Python, AI, Data Science, Machine Learning, LLMs, Streamlit, Next.js, Git, GitHub
 Languages: French, English, Arabic, Kabyle
 `
@@ -119,3 +121,4 @@ app.get("/", (req, res) => {
 // === LANCEMENT DU SERVEUR === //
 console.log("Clé utilisée :", process.env.GROQ_API_KEY);
 app.listen(PORT, () => console.log(`✅ Serveur en ligne sur http://localhost:${PORT}`));
+
