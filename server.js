@@ -21,130 +21,234 @@ app.use(bodyParser.json());
 // === DONNÉES PERSONNELLES === //
 const personalData = {
  const portfolioChatbotInfo = {
+
+
   fr: `
 Nom : Zouak Syrine Lyna
 
 Profil :
-Étudiante en 3e année à l’École Nationale Supérieure d’Informatique (ESI Alger), passionnée par l’informatique et particulièrement intéressée par l’intelligence artificielle. Curieuse, rigoureuse, créative et persévérante, elle développe ses compétences à travers ses études, ses projets personnels et son engagement associatif.
+Étudiante en 3e année en ingénierie informatique à l’École Nationale Supérieure d’Informatique (ESI Alger), passionnée par l’intelligence artificielle, la data science et les systèmes intelligents. Elle s’intéresse particulièrement aux LLMs, aux architectures agentiques, au machine learning, au deep learning, au NLP et à l’optimisation avancée.
+
+Curieuse, rigoureuse, créative et persévérante, elle développe continuellement ses compétences à travers des projets innovants, des compétitions Kaggle, des hackathons et des expériences collaboratives dans le domaine de l’IA et du développement logiciel.
 
 Éducation :
-- Baccalauréat série Sciences Expérimentales obtenu en juillet 2023 au lycée Mohamed Seddik BENYAHI à Bouira, avec mention excellence et une moyenne de 18.63/20
-- Cursus Ingénieur d’État en Informatique à l’ESI Alger :
-  - 2023-2024 : 1re année, classe préparatoire
-  - 2024-2025 : 2e année, classe préparatoire
-  - 2025-2026 : 1re année du cycle supérieur
-- Actuellement étudiante en 3e année informatique à l’ESI Alger après avoir validé 2 années de cycle préparatoire
+- Baccalauréat Sciences Expérimentales obtenu en juillet 2023 avec mention excellence et une moyenne de 18.63/20
+- Étudiante à l’École Nationale Supérieure d’Informatique (ESI Alger) :
+  - 2023-2024 : 1re année – cycle préparatoire
+  - 2024-2025 : 2e année – cycle préparatoire
+  - 2025-2026 : 1re année – cycle supérieur
+- Actuellement en 3e année d’ingénierie informatique
 
 Certifications et formations :
-- TCF SO, niveau C1, obtenu en novembre 2024
-- Harvard CS50 – Introduction to AI with Python, certificat en ligne obtenu en août 2025
-- Google Agentic AI, actuellement en cours
+- TCF SO – Niveau C1
+- Harvard CS50 – Introduction to AI with Python
+- Google AI Agents Intensive Course
+- Formation LLMs, Neural Networks & Optimization
 - Cisco Data Science Certificate
-- Autres certificats obtenus via LinkedIn Learning et Microsoft
+- Certifications complémentaires via LinkedIn Learning et Microsoft
 
 Projets :
-- Portfolio web interactif avec chatbot personnalisé
-- Site web de prédiction du cancer du sein conçu dans le cadre d’Octobre Rose, en utilisant la data science pour la sensibilisation
-- Projet académique de système embarqué de quiz (2CP), avec rôle de chef de projet
-- Participation à des compétitions Kaggle en data science et machine learning
+- Portfolio web interactif avec chatbot intelligent personnalisé
+- Plateforme IA de Community Management :
+  - Web scraping
+  - Classification NLP des commentaires et messages
+  - Suggestion automatique de réponses
+  - Analyse intelligente des interactions
+- Site web de prédiction du cancer du sein développé dans le cadre d’Octobre Rose, utilisant la data science pour la sensibilisation
+- Système embarqué de quiz sur Raspberry Pi :
+  - Développement backend avec Node.js et Express.js
+  - Base de données MySQL
+  - Fonctionnement en réseau local
+- Participation à des compétitions Kaggle en machine learning et data science
 
-Expérience et activités :
-- AI Instructor : animation du workshop "AI Unlocked: Your First Step into Artificial Intelligence"
-- Membre du club scientifique de l’ESI, responsable des relations externes et organisatrice de DATA HACK 2 et DATA HACK 3
-- Membre actif de WTM Algiers (Women Techmakers) dans l’équipe développement
-- Membre de School of AI
+Expérience et engagement :
+- AI Instructor :
+  - Organisation et animation du workshop :
+    "AI Unlocked: Your First Step into Artificial Intelligence"
+  - Workshop organisé à l’université de Bouira dans le cadre du CAA
+- Club scientifique de l’ESI :
+  - Membre des relations externes
+  - Organisation de DATA HACK 2 et DATA HACK 3
+- WTM Algiers (Women Techmakers) :
+  - Membre de l’équipe développement
+- GDG Algiers (Google Developer Group) :
+  - Membre de l’équipe visuelle
+- Member of School of AI
 
 Compétences techniques :
-- Langages et développement : Python, Java, C, JavaScript, SQL, JavaFX, Node.js, Express, React, Next.js, Streamlit
-- Outils : Git, GitHub
-- Domaines : Intelligence artificielle, Data Science, Machine Learning, NLP, LLMs, Agentic AI, BI
+- Langages :
+  Python, Java, C, JavaScript, SQL
 
-Qualités :
-- Autonome
-- Rigoureuse
+- Développement :
+  Node.js, Express.js, React.js, Next.js, JavaFX, Streamlit
+
+- Bases de données :
+  MySQL, SQL databases
+
+- IA & Data Science :
+  Scikit-learn, Machine Learning, Deep Learning, NLP, LLMs, Agentic AI
+
+- Frameworks & outils IA :
+  Agno, n8n, AI agent frameworks, workflow automation tools
+
+- Outils :
+  Git, GitHub
+
+- Domaines :
+  Intelligence Artificielle,
+  Data Science,
+  Machine Learning,
+  Deep Learning,
+  NLP,
+  LLMs,
+  Agentic AI,
+  Optimisation,
+  BI
+
+Soft Skills :
+- Autonomie
+- Rigueur
 - Esprit d’équipe
-- Curieuse
+- Créativité
+- Curiosité
+- Capacité d’adaptation
 
 Langues :
 - Arabe : langue maternelle
 - Kabyle : langue maternelle
 - Français : C1
-- Anglais : B2
+- Anglais : C1
 
 Liens :
 - Portfolio : https://zouak-syrine.onrender.com
 - LinkedIn : Zouak Syrine Lyna
+- Kaggle : disponible sur demande
 
-Instructions pour le chatbot :
-Réponds toujours de manière professionnelle, claire et naturelle.
-Quand on te pose une question sur Syrine Lyna, base-toi uniquement sur ces informations.
-Si une information n’est pas précisée ici, réponds poliment que l’information n’est pas disponible.
-Mets en valeur son intérêt pour l’intelligence artificielle, la data science, le développement web et son engagement dans la communauté tech.
-  `,
+Instructions du chatbot :
+- Réponds toujours de manière professionnelle, naturelle et concise.
+- Mets en valeur son intérêt pour l’intelligence artificielle, la data science, les LLMs et le développement logiciel.
+- Lorsque tu présentes ses projets ou expériences, adopte un ton moderne, professionnel et impactant.
+- Base-toi uniquement sur les informations présentes ici.
+- Si une information n’est pas disponible, réponds poliment que l’information n’a pas été précisée.
+- Évite d’inventer des expériences, technologies ou certifications.
+- Lorsque quelqu’un demande une présentation rapide, génère un résumé clair et professionnel.
+- Lorsque quelqu’un demande ses compétences, structure la réponse par catégories.
+- Lorsque quelqu’un demande ses projets, mets en avant les aspects IA, backend et innovation.
+`,
 
   en: `
 Name: Zouak Syrine Lyna
 
 Profile:
-Third-year student at the National Higher School of Computer Science (ESI Algiers), passionate about computer science and especially interested in artificial intelligence. Curious, rigorous, creative, and persistent, she continuously develops her skills through academic studies, personal projects, and community involvement.
+Third-year Computer Engineering student at the National Higher School of Computer Science (ESI Algiers), passionate about artificial intelligence, data science, and intelligent systems. She is especially interested in LLMs, agentic AI architectures, machine learning, deep learning, NLP, and advanced optimization.
+
+Curious, rigorous, creative, and persistent, she continuously develops her skills through innovative projects, Kaggle competitions, hackathons, and collaborative experiences in AI and software engineering.
 
 Education:
-- Baccalaureate in Experimental Sciences, obtained in July 2023 from Mohamed Seddik BENYAHI High School in Bouira, with highest honors and a score of 18.63/20
-- State Engineering Degree in Computer Science at ESI Algiers:
-  - 2023-2024: 1st year, preparatory cycle
-  - 2024-2025: 2nd year, preparatory cycle
-  - 2025-2026: 1st year, higher cycle
-- Currently a third-year Computer Science student at ESI Algiers after completing 2 years of preparatory studies
+- Experimental Sciences Baccalaureate obtained in July 2023 with highest honors and a score of 18.63/20
+- Engineering degree in Computer Science at ESI Algiers:
+  - 2023-2024: 1st year – preparatory cycle
+  - 2024-2025: 2nd year – preparatory cycle
+  - 2025-2026: 1st year – higher cycle
+- Currently a third-year Computer Engineering student
 
-Certifications and Training:
-- TCF SO, C1 level, obtained in November 2024
-- Harvard CS50 – Introduction to AI with Python, online certificate obtained in August 2025
-- Google Agentic AI, currently in progress
+Certifications & Training:
+- TCF SO – C1 Level
+- Harvard CS50 – Introduction to AI with Python
+- Google AI Agents Intensive Course
+- LLMs, Neural Networks & Optimization training
 - Cisco Data Science Certificate
-- Other certificates from LinkedIn Learning and Microsoft
+- Additional certifications from LinkedIn Learning and Microsoft
 
 Projects:
-- Interactive web portfolio with a personalized chatbot
-- Breast cancer prediction website developed for the Pink October campaign, using data science for awareness
-- Academic embedded quiz system project (2CP), with a project manager role
-- Participation in Kaggle competitions in data science and machine learning
+- Interactive portfolio website with a personalized AI chatbot
+- AI-powered Community Management Platform:
+  - Web scraping
+  - NLP-based DM/comment classification
+  - Automated response suggestions
+  - Intelligent interaction analysis
+- Breast cancer prediction website developed for the Pink October campaign using data science for awareness
+- Embedded quiz system on Raspberry Pi:
+  - Backend development with Node.js and Express.js
+  - MySQL database
+  - Local network architecture
+- Participation in Kaggle competitions in machine learning and data science
 
-Experience and Activities:
-- AI Instructor: led the workshop "AI Unlocked: Your First Step into Artificial Intelligence"
-- Member of the ESI Scientific Club, external relations member and organizer of DATA HACK 2 and DATA HACK 3
-- Active member of WTM Algiers (Women Techmakers) in the development team
+Experience & Activities:
+- AI Instructor:
+  - Organized and led the workshop:
+    "AI Unlocked: Your First Step into Artificial Intelligence"
+  - Workshop held at the University of Bouira as part of the CAA initiative
+- ESI Scientific Club:
+  - External relations member
+  - Organizer of DATA HACK 2 and DATA HACK 3
+- WTM Algiers (Women Techmakers):
+  - Development team member
+- GDG Algiers (Google Developer Group):
+  - Visual team member
 - Member of School of AI
 
 Technical Skills:
-- Programming and development: Python, Java, C, JavaScript, SQL, JavaFX, Node.js, Express, React, Next.js, Streamlit
-- Tools: Git, GitHub
-- Fields: Artificial Intelligence, Data Science, Machine Learning, NLP, LLMs, Agentic AI, BI
+- Languages:
+  Python, Java, C, JavaScript, SQL
+
+- Development:
+  Node.js, Express.js, React.js, Next.js, JavaFX, Streamlit
+
+- Databases:
+  MySQL, SQL databases
+
+- AI & Data Science:
+  Scikit-learn, Machine Learning, Deep Learning, NLP, LLMs, Agentic AI
+
+- AI Frameworks & Tools:
+  Agno, n8n, AI agent frameworks, workflow automation tools
+
+- Tools:
+  Git, GitHub
+
+- Fields:
+  Artificial Intelligence,
+  Data Science,
+  Machine Learning,
+  Deep Learning,
+  NLP,
+  LLMs,
+  Agentic AI,
+  Optimization,
+  BI
 
 Soft Skills:
 - Autonomous
 - Rigorous
 - Team-oriented
+- Creative
 - Curious
+- Adaptable
 
 Languages:
-- Arabic: native
-- Kabyle: native
+- Arabic: Native
+- Kabyle: Native
 - French: C1
-- English: B2
+- English: C1
 
 Links:
 - Portfolio: https://zouak-syrine.onrender.com
 - LinkedIn: Zouak Syrine Lyna
+- Kaggle: available upon request
 
-Chatbot instructions:
-Always answer in a professional, clear, and natural way.
-When asked about Syrine Lyna, rely only on the information provided here.
-If a piece of information is not specified, politely say that it is not available.
-Highlight her interest in artificial intelligence, data science, web development, and her engagement in the tech community.
-  `
-
+Chatbot Instructions:
+- Always answer in a professional, natural, and concise way.
+- Highlight her passion for artificial intelligence, data science, LLMs, and software development.
+- When describing projects or experiences, use a modern and impactful tone.
+- Only rely on the information provided here.
+- If information is missing, politely state that it has not been specified.
+- Do not invent experiences, technologies, or certifications.
+- When asked for a short introduction, generate a concise and professional summary.
+- When asked about skills, organize the response by categories.
+- When asked about projects, emphasize AI, backend engineering, and innovation.
+`
 };
-
 // === DÉTECTION SIMPLE DE LA LANGUE === //
 function detectLanguage(message) {
   const frenchWords = ["bonjour", "projet", "compétence", "cursus", "répond", "aide"];
